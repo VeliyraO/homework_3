@@ -9,6 +9,8 @@
   --white-accent: #ffffff;
   --background-masters: #f5f4fa;
   --footer-link: rgba(255, 255, 255, 0.6);
+  --section-pt: 95px;
+  --section-pb: 95px;
 }
 body {
   font-family: var(--main-font);
@@ -32,6 +34,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -57,6 +61,13 @@ img {
   overflow: hidden;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* ============= COMPONENTS ============= */
 
 .title {
@@ -64,7 +75,9 @@ img {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .logo-link {
@@ -83,6 +96,34 @@ img {
 /* ============= END COMPONENTS ============= */
 
 /* ============= HEADER ============= */
+
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo-link {
+  margin-right: 90px;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
 
 .logo-dark {
   font-family: var(--secondary-font);
@@ -110,17 +151,31 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-left: 50px;
+}
+
+.header .address {
+  margin-left: auto;
 }
 
 .contact-link-header:hover,
 .contact-link-header:focus {
   color: var(--accent-color);
 }
+
 /* ============= END HEADER ============= */
 
 /* ============= HERO ============= */
+.hero-selection {
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
+}
+
 .hero {
   background-color: var(--background-accent);
+  text-align: center;
+  padding-bottom: 200px;
+  padding-top: 200px;
 }
 
 .hero-title {
@@ -129,7 +184,9 @@ img {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--white-accent);
+  margin-bottom: 30px;
 }
 
 .modal-btn {
@@ -141,11 +198,32 @@ img {
   cursor: pointer;
   background-color: var(--accent-color);
   color: var(--white-accent);
+  min-width: 200px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
 }
 
 /* ============= END HERO ============= */
 
 /* ============= ADVANTAGE ============= */
+
+.advantages {
+  padding-top: var(--section-pt);
+  padding-bottom: 47px;
+}
+
+.advantages-list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.advantages-list-itme {
+  flex-basis: calc(100% / 4-30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 
 .advantages-title {
   font-weight: 700;
@@ -154,7 +232,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
+
 .advantages-list-description {
   font-weight: 400;
   font-size: 14px;
@@ -165,10 +245,52 @@ img {
 
 /* ============= END ADVANTAGE ============= */
 
+/* ============= GALLERY ============= */
+.gallery {
+  padding-bottom: var(--section-pb);
+  padding-top: 47px;
+}
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.gallery-list-item {
+  flex-basis: calc(100% / 3-30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+/* ============= END GALLERY ============= */
+
 /* ============= SELECTION MASTERS ============= */
 
 .masters {
   background-color: var(--background-masters);
+  padding-top: var(--section-pt);
+  padding-bottom: var(--section-pb);
+}
+
+.masters-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.masters-list-item {
+  flex-basis: calc(100% / 4-30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 4px;
+  background-color: var(--white-accent);
+}
+
+.masters-list-content-wraper {
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .masters-list-title {
@@ -176,7 +298,9 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .masters-list-position {
@@ -184,12 +308,26 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--text-description);
 }
 
 /* ============= END SELECTION MASTERS ============= */
 
 /* ============= BODY ============= */
+
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+  margin-top: var(--section-pt);
+}
+
+.hero-list-item:not(:last-child) {
+  margin-right: 10px;
+}
 
 .btn-selection {
   font-family: inherit;
@@ -201,6 +339,9 @@ img {
   background: var(--background-masters);
   border-radius: 4px;
   color: var(--title-color);
+  border: none;
+  padding: 6px 20px;
+  min-width: 145px;
 }
 
 .btn-selection:hover,
@@ -214,6 +355,7 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  margin-bottom: 5px;
 }
 
 .gallery-description {
@@ -224,14 +366,49 @@ img {
   color: var(--text-description);
 }
 
-/* ============= BODY ============= */
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -28px;
+  margin-top: -28px;
+}
+
+.portfolio-list-item {
+  outline: 1px solid #eeeeee;
+  flex-basis: calc(100% / 3-30px);
+  margin-left: 28px;
+  margin-top: 28px;
+}
+
+.gallery-list-content-wraper {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* ============= END BODY ============= */
 
 /* ============= FOOTER ============= */
 
 .footer {
   background-color: var(--background-accent);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-address {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-link .footer {
+  margin-right: 200px;
+}
 .logo-white {
   font-family: var(--secondary-font);
   color: var(--white-accent);
@@ -244,6 +421,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-link);
+  margin-bottom: 10px;
 }
 
 .location {
